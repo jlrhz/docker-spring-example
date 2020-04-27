@@ -35,7 +35,22 @@ out/
 .vscode/
 
 
+<<<<<<< HEAD
 #ignore database Dumps:
 
 db/dumps
 !db/dumps/.keep
+=======
+# Ignore Database Dumps:
+db/dumps/
+!db/dumps/.keep
+
+
+# Ingore dotenv files:
+*.env
+!*example.env
+
+# Ignore VS Code Server:
+.vscode-server
+.gitconfig
+>>>>>>> bad0537583e1e03a6f24e8141de4f20fbb0eb938

@@ -1,6 +1,7 @@
 version: "3.7"
 
 volumes:
+<<<<<<< HEAD
     postgres_data:
     gradle_user_home:
 
@@ -31,3 +32,17 @@ services:
             SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/demo_development
             SPRING_DATASOURCE_USERNAME: postgres
             SPRING_DATASOURCE_PASSWORD: 3x4mpl3P455w0rd
+=======
+  postgres_data:
+
+services:
+  postgres:
+    image: postgres:12-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d
+    ports:
+      - ${DEMO_PG_PORT:-5432}:5432
+    environment:
+      POSTGRES_PASSWORD: 3x4mpl3P455w0rd
+>>>>>>> bad0537583e1e03a6f24e8141de4f20fbb0eb938
