@@ -47,3 +47,4 @@ db/dumps/
 # Ignore VS Code Server:
 .vscode-server
 .gitconfig
+.heroku/deploy
